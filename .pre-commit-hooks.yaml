@@ -5,3 +5,10 @@
   always_run: true
   entry: terraform_docs.sh
   language: script
+- id: markdownlint
+  name: markdownlint
+  description: "Checks the style of Markdown/Commonmark files."
+  require_serial: true
+  always_run: true
+  entry: markdownlint.sh
+  language: script
