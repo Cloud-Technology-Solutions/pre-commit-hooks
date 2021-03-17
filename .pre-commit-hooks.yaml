@@ -19,4 +19,5 @@
   always_run: true
   entry: check_modules_use_tag.sh
   language: script
-  files: \(env\|root\)\.ya*ml$
+  # files: \(env\|root\)\.ya*ml$
+  files: root.yaml
