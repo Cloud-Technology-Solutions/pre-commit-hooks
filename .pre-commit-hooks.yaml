@@ -21,4 +21,4 @@
   language: script
   # files: \(env\|root\)\.ya*ml$
   # files: root.yaml
-  files: \(env\|root\)\.yaml$
+  files: (env|root)\.yaml$
