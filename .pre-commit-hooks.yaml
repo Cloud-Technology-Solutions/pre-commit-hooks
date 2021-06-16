@@ -22,3 +22,9 @@
   # files: \(env\|root\)\.ya*ml$
   # files: root.yaml
   files: (env|root)\.yaml$
+- id: add_missing_readme
+  name: add_missing_readme
+  description: make sure README.md exists in any directory with a main.tf
+  entry: add_missing_readme.sh
+  language: script
+  files: 'main\.tf$'
