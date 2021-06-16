@@ -6,4 +6,5 @@ if [[ -f "README.md" ]]; then
   exit 0
 else
   echo 'lol no readme'
+  exit 1
 fi
