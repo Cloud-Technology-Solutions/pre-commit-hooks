@@ -27,4 +27,5 @@
   description: make sure README.md exists in any directory with a main.tf
   entry: add_missing_readme.sh
   language: script
-  files: 'main\.tf$'
+  files: (\.tf)$
+  exclude: \.terraform\/.*$
