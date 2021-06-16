@@ -4,11 +4,9 @@
 # only run if no readme means nothing to check
 
 for file_to_check; do
-  file_dir=$(dirname $file_to_check)
-  echo "Looking for README.md in $file_dir"
-  if [[ -f "$file_dir/README.md" ]]; then
-    echo "README.md found at $file_dir/README.md"
-  else
+  file_dir=$(dirname "$file_to_check")
+  # echo "Looking for README.md in $file_dir"
+  if [[ ! -f "$file_dir/README.md" ]]; then
     echo "No README.md found in $file_dir"
     cat <<EOF >"$file_dir/README.md"
 # \`$(basename "$file_dir")\` README
