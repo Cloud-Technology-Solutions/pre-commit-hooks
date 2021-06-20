@@ -1,24 +1,25 @@
 - id: markdownlint
   name: markdownlint
-  description: "Checks the style of Markdown/Commonmark files."
+  entry: hooks/markdownlint.sh
+  description: Checks the style of Markdown files.
+  language: script
+  files: \.md$
   require-serial: true
   always-run: true
-  entry: markdownlint.sh
-  language: script
 - id: check-modules-use-tag
   name: check-modules-use-tag
-  description: "Checks that Terragrunt env files point to a tag and not enother form of ref."
+  entry: hooks/check-modules-use-tag.sh
+  description: Checks that Terragrunt env file modules refs point to a tag.
+  language: script
+  files: (env|root)\.yaml$
   require-serial: true
   always-run: true
-  entry: check-modules-use-tag.sh
-  language: script
-  # files: \(env\|root\)\.ya*ml$
-  # files: root.yaml
-  files: (env|root)\.yaml$
 - id: add-missing-readme
   name: add-missing-readme
-  description: make sure README.md exists in any directory with a main.tf
-  entry: add-missing-readme.sh
+  entry: hooks/add-missing-readme.sh
+  description: Makes sure a README.md exists in any directory with a main.tf.
   language: script
   files: (main\.tf)$
   exclude: \.terraform\/.*$
+  require-serial: true
+  always-run: true
