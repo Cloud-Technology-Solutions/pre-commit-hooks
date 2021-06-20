@@ -5,8 +5,6 @@ This is a collection of [pre-commit](https://pre-commit.com) hooks used by
 
 ## Hooks
 
--   `markdownlint`: runs `markdownlint-cli` against any Markdown files in the
-    repository.
 -   `add-missing-readme`: adds a `README.md` formatted for use with the third
     party `terraform-docs` hook to auto-generate Terraform documentation for
     any directory containing a `main.tf`.
