@@ -1,31 +1,24 @@
-- id: terraform_docs
-  name: Terraform docs
-  description: Inserts input and output documentation into README.md (using terraform-docs).
-  require_serial: true
-  always_run: true
-  entry: terraform_docs.sh
-  language: script
 - id: markdownlint
   name: markdownlint
   description: "Checks the style of Markdown/Commonmark files."
-  require_serial: true
-  always_run: true
+  require-serial: true
+  always-run: true
   entry: markdownlint.sh
   language: script
-- id: check_modules_use_tag
-  name: check_modules_use_tag
+- id: check-modules-use-tag
+  name: check-modules-use-tag
   description: "Checks that Terragrunt env files point to a tag and not enother form of ref."
-  require_serial: true
-  always_run: true
-  entry: check_modules_use_tag.sh
+  require-serial: true
+  always-run: true
+  entry: check-modules-use-tag.sh
   language: script
   # files: \(env\|root\)\.ya*ml$
   # files: root.yaml
   files: (env|root)\.yaml$
-- id: add_missing_readme
-  name: add_missing_readme
+- id: add-missing-readme
+  name: add-missing-readme
   description: make sure README.md exists in any directory with a main.tf
-  entry: add_missing_readme.sh
+  entry: add-missing-readme.sh
   language: script
   files: (main\.tf)$
   exclude: \.terraform\/.*$
