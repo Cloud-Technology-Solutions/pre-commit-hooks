@@ -8,7 +8,7 @@ for file_to_check; do
   # echo "Looking for README.md in $file_dir"
   if [[ ! -f "$file_dir/README.md" ]]; then
     echo "No README.md found in $file_dir"
-    cat <<EOF >"$file_dir/README.md"
+    cat << EOF > "$file_dir/README.md"
 # \`$(basename "$file_dir")\` README
 
 TODO
