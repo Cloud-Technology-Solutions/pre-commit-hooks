@@ -1,22 +1,14 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/python-3
 {
 	"name": "pre-commit-hooks",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": {
-			"VARIANT": "3",
-			"INSTALL_NODE": "true",
-			"NODE_VERSION": "lts/*"
-		}
+		"dockerfile": "Dockerfile"
 	},
-	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance",
 		"mads-hartmann.bash-ide-vscode",
-		"rogalmic.bash-debug"
+		"rogalmic.bash-debug",
+		"redhat.vscode-yaml"
 	],
 	"postCreateCommand": "pre-commit install",
 	"remoteUser": "vscode"
